@@ -12,7 +12,7 @@ pipeline {
            }
    stage('craete a package') {
       steps {
-         echo 'This will create a package
+         echo 'This will create a package'
          sh 'mvn package'
                              }
             }
