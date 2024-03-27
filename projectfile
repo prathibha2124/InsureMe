@@ -19,5 +19,8 @@ pipeline {
     stage('publish the HTML Reports') {
       steps {
          publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/var/lib/jenkins/workspace/InsureMe-Project/surefire-reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+                           }
             }
+    }
+}
            
