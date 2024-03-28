@@ -1,4 +1,4 @@
-- name: Congigure docker in EC2 Instance
+- name: Configure docker in EC2 Instance
   hosts: all
   become: true
   connection: ssh
