@@ -3,4 +3,22 @@
   become: true
   connection: ssh
   tasks:
-  - name: Update EC2 instance
+- name: Update EC2 instance
+  command: sudo yum update
+  
+- name: Tnstall docker
+  command: sudo tum install dockere-y
+  become: yes
+  become_user: root
+  
+- name: Start Docker service
+  command: systemctl start docker
+  become: yes
+  become_user: root
+
+  
+  
+  
+  
+
+  
