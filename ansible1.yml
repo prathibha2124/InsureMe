@@ -6,8 +6,8 @@
 - name: Update EC2 instance
   command: sudo yum update
   
-- name: Tnstall docker
-  command: sudo tum install dockere-y
+- name: Install docker
+  command: sudo yum install docker -y
   become: yes
   become_user: root
   
