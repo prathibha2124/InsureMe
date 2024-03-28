@@ -1,1 +1,6 @@
--name:
+- name: Congigue docker in EC2 Instance
+  hosts: all
+  become: true
+  connection: ssh
+  tasks:
+  - name: Update EC2 instance
