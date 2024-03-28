@@ -38,7 +38,11 @@ pipeline {
         sh 'docker push prathibha05/insureme-app:1.0'
                              }
            }
-   
+    stage('Ansible config for deployment in new EC2 instance') {
+       steps {
+         ansiblePlaybook credentialsId: 'ansible-ssh', disableHostKeyChecking: true, installation: 'Ansible', inventory: '/etc/ansible/hosts', playbook: 'ansible1.yml', vaultTmpPath: ''
+                                              }
+             }
         }
  }
           
