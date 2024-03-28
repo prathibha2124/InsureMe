@@ -16,6 +16,9 @@
     become: yes
     become_user: root
 
+  - name: Deploy the image and run as container
+    command: docker run -itd 8084:8081 prathibha05/insureme-app:1.0
+  
   
   
   
