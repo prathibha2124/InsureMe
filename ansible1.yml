@@ -1,4 +1,4 @@
-- name: Congigue docker in EC2 Instance
+- name: Congigure docker in EC2 Instance
   hosts: all
   become: true
   connection: ssh
@@ -12,7 +12,7 @@
   become_user: root
   
 - name: Start Docker service
-  command: systemctl start docker
+  command: sudo systemctl start docker
   become: yes
   become_user: root
 
