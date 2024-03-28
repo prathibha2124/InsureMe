@@ -34,10 +34,11 @@ pipeline {
                                    }
             }
    stage('Push the docker image') {
-     steps {
+      steps {
         sh 'docker push prathibha05/insureme-app:1.0'
                              }
            }
+   
         }
  }
           
