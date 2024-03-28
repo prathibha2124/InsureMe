@@ -28,9 +28,9 @@ pipeline {
             }
    stage('login to dockerhub') {
       steps {   
-         withCredentials([usernamePassword(credentialsId: 'docker-login', passwordVariable: 'dockerpasswd', usernameVariable: 'dockeruser')]) {
-         sh 'docker login -u $(dockeruser) -p $(dockerpasswd)'
-                                                            }  
+         withCredentials([usernamePassword(credentialsId: 'dockerlogin', passwordVariable: 'dockerpasswd', usernameVariable: 'dockeruser')]) {
+         sh "docker login -u $(env.dockeruser) -p $(env.dockerpasswd)"
+                                                            }
                                    }
             }
    stage('Push the docker image') {
